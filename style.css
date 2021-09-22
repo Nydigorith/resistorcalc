@@ -1,0 +1,631 @@
+
+    @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+    .item[value="0"] {
+        background: Black;
+        color: white;
+    }
+
+    .item[value="1"] {
+        background: brown;
+        color: white;
+    }
+
+    .item[value="2"] {
+        background: red;
+        color: white;
+    }
+
+    .item[value="3"] {
+        background: orange;
+        color: black;
+    }
+
+    .item[value="4"] {
+        color: black;
+        background: yellow;
+    }
+
+    .item[value="5"] {
+        background: green;
+        color: white;
+    }
+
+    .item[value="6"] {
+        background: blue;
+        color: white;
+    }
+
+    .item[value="7"] {
+        background: violet;
+        color: black;
+    }
+
+    .item[value="8"] {
+        background: grey;
+        color: white;
+    }
+
+    .item[value="9"] {
+        color: black;
+        background: white;
+    }
+
+    .item[value="10"] {
+        background: gold;
+        color: black;
+    }
+
+    .item[value="11"] {
+        background: silver;
+        color: black;
+    }
+
+
+    html,
+    body {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        /* font-size: 16px; */
+        font-family: 'Poppins', sans-serif;
+        background-color: rgb(246, 248, 252);
+
+    }
+
+    .background {
+        background: transparent linear-gradient(180deg, #bdbcbc 0%, #dddddd 100%) 0% 0% no-repeat padding-box;
+        position: absolute;
+        width: 100%;
+        height: 50%;
+        padding-bottom: 15vw;
+        top: 0;
+        z-index: 0 !important;
+
+    }
+    .line {
+        background-color:#9e9d9d;
+        position: absolute;
+        width: 100%;
+        height: .6vw;
+        /* top: 0; */
+        margin-bottom:39%;
+        z-index: 0 !important;
+
+    }
+
+   /*  button {
+        margin: 10px 10px;
+        border-radius: .7vw;
+        width: 200px;
+        height: 50px;
+    } */
+
+    .resistor {
+        width: 100%;
+    }
+
+    .resistorImage {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        /* margin: 20px 0px; */
+
+        position: relative;
+    }
+
+    .resistorImage img {
+        width: 100%;
+    }
+
+    .resistorBand {
+        position: relative;
+    }
+
+
+    select {
+        outline: none !important;
+        box-shadow: none !important;
+        font-size: 1.7vw;
+        border: solid .15vw #AFAFAF;
+        font-weight: 700;
+        text-align-last: center;
+        /* border: solid .3vw #AFAFAF; */
+    }
+    option {
+        
+        font-size: 1.5vw;
+/*          font-weight: 600; */
+        
+    }
+    
+    .hiddenFirstBand,
+    .hiddenSecondBand,
+    .hiddenThirdBand,
+    .hiddenFourthBand,
+    .hiddenFifthBand,
+    .hiddenSixthBand, .hiddenItem {
+        display: none;
+    }
+
+
+    /* First */
+    .boxFirstBand {
+        position: absolute;
+        width: 5vw;
+        height: 18.57vw;
+        top: 0vw;
+        left: 16.2vw;
+        background-color: white;
+
+
+    }
+
+    .firstBand {
+
+        position: absolute;
+        width: 5vw;
+        height: 15vw;
+        top: -10vw;
+        left: 16.2vw;
+        background-color: white;
+        opacity: 60%;
+    }
+
+    .firstBandSelector {
+        /* display:none; */
+        position: absolute;
+        left: 15.5vw;
+        width: 6.4vw;
+        height: 3.5vw;
+        border-radius: .7vw;
+        background-color: white;
+        margin: 2.2vw 0 0 0;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        text-align: center;
+    }
+
+
+    /* Second */
+    .boxSecondBand {
+        position: absolute;
+        width: 5vw;
+        height: 13.6vw;
+        top: 2.5vw;
+        left: 28vw;
+        background-color: white;
+
+    }
+
+    .secondBand {
+        position: absolute;
+        width: 5vw;
+        height: 15vw;
+        top: -10vw;
+        left: 28vw;
+        background-color: white;
+        opacity: 60%;
+    }
+
+    .secondBandSelector {
+
+        position: absolute;
+        width: 6.4vw;
+        height: 3.5vw;
+        
+        border-radius: .7vw;
+        left: 27.3vw;
+        background-color: white;
+        margin: 2.2vw 0 0 0;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        text-align: center;
+    }
+
+
+    /* Third */
+    .boxThirdBand {
+        display: none;
+        position: absolute;
+        width: 5vw;
+        height: 13.6vw;
+        top: 2.5vw;
+        left: 35.4vw;
+        background-color: white;
+
+    }
+
+    .thirdBand {
+        display: none;
+        position: absolute;
+        width: 5vw;
+        height: 15vw;
+        top: -10vw;
+        left: 35.4vw;
+        background-color: white;
+        margin: -10px 0 0 0;
+        opacity: 60%;
+    }
+
+    .thirdBandSelector {
+        display: none;
+        position: absolute;
+        width: 6.4vw;
+        height: 3.5vw;
+        border-radius: .7vw;
+        left: 34.7vw;
+        background-color: white;
+        margin: 2.2vw 0 0 0;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        text-align: center;
+    }
+
+    /* Fourth */
+    .boxFourthBand {
+        position: absolute;
+        width: 5vw;
+        height: 13.6vw;
+        top: 2.5vw;
+        left: 51vw;
+        background-color: white;
+
+    }
+
+    .fourthBand {
+        position: absolute;
+        width: 5vw;
+        height: 15vw;
+        top: -10vw;
+        left: 51vw;
+        background-color: white;
+        margin: -10px 0 0 0;
+        opacity: 60%;
+    }
+
+    .fourthBandSelector {
+
+        position: absolute;
+        width: 9vw;
+        height: 3.5vw;
+        border-radius: .7vw;
+
+        left: 49vw;
+        background-color: white;
+        margin: 2.2vw 0 0 0;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        text-align: center;
+    }
+
+
+
+    /* Fifth */
+    .boxFifthBand {
+
+
+        position: absolute;
+        width: 5vw;
+        height: 18.57vw;
+        top: 0vw;
+        left: 78.8vw;
+        background-color: white;
+
+    }
+
+    .fifthBand {
+
+
+        position: absolute;
+        width: 5vw;
+        height: 15vw;
+        top: -10vw;
+        left: 78.8vw;
+        background-color: white;
+        margin: -10px 0 0 0;
+        opacity: 60%;
+    }
+
+    .fifthBandSelector {
+
+        position: absolute;
+        width: 7.5vw;
+        height: 3.5vw;
+        left: 77.6vw;
+        border-radius: .7vw;
+        border-radius: .7vw;
+        background-color: white;
+        margin: 2.2vw 0 0 0;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        text-align: center;
+    }
+
+
+
+
+    /* Sixth */
+    .boxSixthBand {
+        display: none;
+        position: absolute;
+        width: 5vw;
+        height: 18.57vw;
+        top: 0vw;
+        left: 78.8vw;
+        background-color: white;
+
+    }
+
+    .sixthBand {
+        display: none;
+        position: absolute;
+        width: 5vw;
+        height: 15vw;
+        top: -10vw;
+        left: 78.8vw;
+        background-color: white;
+        margin: -10px 0 0 0;
+        opacity: 60%;
+    }
+
+    .sixthBandSelector {
+        display: none;
+        position: absolute;
+        width: 8.5vw;
+        height: 3.5vw;
+        left: 77.1vw;
+        border-radius: .7vw;
+        border-radius: .7vw;
+        background-color: white;
+        margin: 2.2vw 0 0 0;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        text-align: center;
+    }
+
+    .fiveFifthBandSelector {
+        width: 7.5vw;
+        height: 3.5vw;
+        left: 77.6vw;
+    }
+
+    .fiveFifthBand {
+        height: 15vw;
+        top: -10vw;
+        left: 78.8vw;
+    }
+
+    .fiveBoxFifthBand {
+        height: 18.57vw;
+        top: 0vw;
+        left: 78.8vw;
+    }
+
+    .sixFifthBandSelector {
+        height: 3.5vw;
+        left: 62vw;
+    }
+
+    .sixFifthBand {
+        height: 15vw;
+        top: -10vw;
+        left: 63vw;
+    }
+
+    .sixBoxFifthBand {
+        height: 13.6vw;
+        top: 2.5vw;
+        left: 63vw;
+    }
+
+    
+
+    .resitorResult {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin-top: 7vw;
+        position: relative;
+        z-index: 3;
+    }
+
+    .resultBox {
+        background-color: rgb(255, 255, 255);
+        width: 22vw;
+        height: 7.3vw;
+        margin: 0vw .9vw;
+        padding: 2vw;
+        text-align: center;
+        border-radius: 1.4vw;
+        box-shadow: 0px 5px 10px #00000029;
+        line-height: 1;
+    }
+
+    .resultText {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        font-size: 2.4vw;
+        font-weight: 800;
+    }
+
+    .resultInput {
+        font-size: 2.4vw;
+        color: #B31B1B;
+        font-weight: 800;
+    }
+
+    .resultInputToggle {
+        font-size: 1.7vw;
+    }
+
+    .symbol {
+        font-weight: 700;
+    }
+
+    input {
+        display: none;
+    }
+
+    .bandCount {
+        z-index: 1;
+     /*    margin-top: .8vw; */
+        margin-bottom: 1.5vw;
+    }
+
+    label {
+        /*  border: 1px solid black; */
+        margin: 0px .5vw;
+        padding: .5vw 1.7vw;
+        border-radius: 100px;
+        transition: 0.4s;
+        font-size: 1.7vw;
+        font-weight: 800;
+        background-color: white;
+    }
+
+    /* label:hover {
+        border: 1px solid black;
+        background-color: yellow;
+    } */
+    .four {
+        background-color: #B31B1B;
+        color: white;
+    }
+
+    .clear {
+        position: relative;
+        z-index: 2;
+        width: 0vw;
+        height: 0vw;
+        top:-1.8%;
+    }
+    .fas {
+       
+        margin-left: 39vw;
+        padding:.6vw;
+        border-radius: 100px;
+        font-size: 1.5vw;
+        background-color: white;
+        color: black;
+        /* transition: 0.4s; */
+    }
+    .fas:active {
+        
+        background-color: #B31B1B;
+        color: white;
+    }
+    @media (max-width: 576px) {
+        html,body {
+padding: 10vw 0;
+        }
+        .background {
+        background: transparent linear-gradient(180deg, #b9b9b9 0%, #E5E6EB 100%) 0% 0% no-repeat padding-box;
+        position: absolute;
+        width: 100%;
+        height: 50%;
+        margin-top: -24vw;
+        top: 0;
+        z-index: 0 !important;
+
+    }
+    .line {
+        background-color:white;
+        position: absolute;
+        width: 100%;
+        height: 1vw;
+     
+        margin-bottom:135%;
+        z-index: 0 !important;
+
+    }
+       
+    .bandCount {
+        z-index: 1;
+        margin-bottom: 8vw;
+    }
+
+    label {
+        /*  border: 1px solid black; */
+        margin: 0px .8vw;
+        padding: .5vw 4.7vw;
+        border-radius: 100px;
+        transition: 0.4s;
+        font-size: 4.5vw;
+        font-weight: 800;
+        background-color: white;
+    }
+    
+    .fas {
+       margin-left: 39vw;
+       padding:1.3vw;
+       border-radius: 100px;
+       font-size: 2.1vw;
+       background-color: white;
+       color: black;
+   }
+
+   .resitorResult {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top:12vw;
+    }
+
+    .resultBox {
+        background-color: rgb(255, 255, 255);
+        width: 75vw;
+        height: 22vw;
+        margin: 2vw 0vw;
+        padding: 3vw;
+        text-align: center;
+        border-radius: 3vw;
+        box-shadow: 0px 5px 10px #00000029;
+        line-height: 1;
+    }
+
+    .resultText {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        font-size: 6vw;
+        font-weight: 800;
+    }
+
+    .resultInput {
+        font-size: 6vw;
+        color: #B31B1B;
+        font-weight: 800;
+    }
+
+    .resultInputToggle {
+        font-size: 4vw;
+    }
+
+    
+  
+
+    /* .firstBand , .secondBand ,.thirdBand , .fourthBand ,.fifthBand ,.sixthBand {
+ 
+        height: 20vw;
+       
+    } */
+
+
+    }
